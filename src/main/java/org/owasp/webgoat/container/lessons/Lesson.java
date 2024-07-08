@@ -22,6 +22,7 @@
 
 package org.owasp.webgoat.container.lessons;
 
+import java.util.ArrayList;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,6 +38,7 @@ public abstract class Lesson {
   /** Constructor for the Lesson object */
   protected Lesson() {
     id = ++count;
+//  assignments = new ArrayList<>();
   }
 
   /**

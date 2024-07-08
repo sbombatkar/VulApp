@@ -23,8 +23,6 @@
 package org.owasp.webgoat.lessons.sqlinjection.advanced;
 
 import java.sql.*;
-import java.util.Map;
-
 import org.owasp.webgoat.container.LessonDataSource;
 import org.owasp.webgoat.container.assignments.AssignmentEndpoint;
 import org.owasp.webgoat.container.assignments.AssignmentHints;
@@ -50,10 +48,11 @@ public class SqlInjectionLesson6a extends AssignmentEndpoint {
     this.dataSource = dataSource;
   }
 
-  @PostMapping("/SqlInjectionAdvanced/attack6a")
-  public AttackResult completed(@RequestBody Map<String, String> userIdMap) {
-      String userId = userIdMap.get("userid_6a");
-      return injectableQuery(userId);
+    @PostMapping("/SqlInjectionAdvanced/attack6a")
+    @ResponseBody
+    public AttackResult completed(@RequestParam(value = "userid_6a") String userId) {
+        System.out.println(userId + "Trying to print this");
+        return injectableQuery(userId);
     // The answer: Smith' union select userid,user_name, password,cookie,cookie, cookie,userid from
     // user_system_data --
   }
