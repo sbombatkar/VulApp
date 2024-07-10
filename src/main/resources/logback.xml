@@ -1,6 +1,6 @@
 <configuration>
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/webgoat.log</file>
+        <file>logs/webgoat. log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logs/webgoat.%d{yyyy-MM-dd}.log</fileNamePattern>
         </rollingPolicy>

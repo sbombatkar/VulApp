@@ -42,7 +42,7 @@ import org.springframework.web.bind.annotation.RestController;
       "xss-dom-message-hint-5",
       "xss-dom-message-hint-6"
     })
-public class DOMCrossSiteScriptingVerifier extends AssignmentEndpoint {
+public class  DOMCrossSiteScriptingVerifier extends AssignmentEndpoint {
 
   @PostMapping("/CrossSiteScripting/dom-follow-up")
   @ResponseBody
